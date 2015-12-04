@@ -1,0 +1,33 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/tv_file"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"/>
+
+    <ProgressBar
+        android:id="@+id/pgb_download"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_file"/>
+
+    <Button
+        android:id="@+id/btn_download_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pgb_download"
+        android:layout_toLeftOf="@+id/btn_download_stop"
+        android:text="下载" />
+
+    <Button
+        android:id="@+id/btn_download_stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btn_download_start"
+        android:layout_alignBottom="@+id/btn_download_start"
+        android:layout_alignRight="@+id/pgb_download"
+        android:text="停止" />
+
+</merge>

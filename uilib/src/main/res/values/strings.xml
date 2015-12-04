@@ -1,0 +1,24 @@
+<resources>
+
+    <string name="app_name">AndroidLibraryUI</string>
+    <string name="confirm">删除</string>
+    <string name="cancel">取消</string>
+    <string name="yes">是</string>
+    <string name="no">否</string>
+    <string name="confirm_del">确定删除吗？</string>
+    <string name="confirm_upd">确定批量修改吗？</string>
+    <string name="item_menu_title">操作</string>
+
+    <string-array name="item_menu">
+        <item >修改</item>
+        <item >删除</item>
+    </string-array>
+    
+    <string name="app_list_footer_more">更多</string>
+    <string name="app_list_footer_loading">加载中</string>
+    <string name="app_list_header_refresh_last_update">刷新</string>
+    
+    <string name="footer_more">↑  更多</string>
+    <string name="footer_clickToRefresh">数据全部加载完毕，点击此处刷新</string>
+    <string name="footer_loading">加载中...</string>
+</resources>

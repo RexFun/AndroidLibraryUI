@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+     <color name="gray">#dddddd</color>
+     <color name="gray_open">#99dddddd</color>
+     <color name="gray_dark">#666666</color>
+     <color name="gray_dark_open">#99666666</color>
+     <color name="white">#ffffff</color>
+     <color name="white_open">#99ffffff</color>
+     <color name="blue">#0000ff</color>
+     <color name="blue_open">#990000ff</color>
+     <color name="blue_light">#00dddd</color>
+     <color name="blue_light_open">#9900dddd</color>
+     <color name="blue_light_close">#008888</color>
+     <color name="red">#ff0000</color>
+     <color name="red_open">#99ff0000</color>
+     <color name="yellow">#ffff33</color>
+     <color name="orange">#ff8000</color>
+     <color name="green">#00db00</color>
+     <color name="green_open">#9900db00</color>
+     <color name="open">#99000000</color>
+</resources>
