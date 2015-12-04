@@ -96,7 +96,7 @@ public class MultiCheckListView extends ListView
 	
 	/**
 	 * 获取主键值集合
-	 * @return List<Long>
+	 * @return List
 	 */
 	public List<Long> getIdList()
 	{
@@ -337,63 +337,60 @@ public class MultiCheckListView extends ListView
 	/*PullRefresh方法**********/
 	/**
 	 * 获取最大数据条数
-	 * @return
+	 * @return int
 	 */
 	public int getMaxDataNum() {
 		return MaxDataNum;
 	}
 	/**
 	 * 设置最大数据条数
-	 * @return
 	 */
 	public void setMaxDataNum(int maxDataNum) {
 		MaxDataNum = maxDataNum;
 	}
 	/**
 	 * 获取每秒读取数据数
-	 * @return
+	 * @return int
 	 */
 	public int getPerDataNum() {
 		return PerDataNum;
 	}
 	/**
 	 * 设置每秒读取数据数
-	 * @return
 	 */
 	public void setPerDataNum(int perDataNum) {
 		PerDataNum = perDataNum;
 	}
 	/**
 	 * 获取每次读取数据条数
-	 * @return
+	 * @return int
 	 */
 	public int getAvgDataNum() {
 		return AvgDataNum;
 	}
 	/**
 	 * 设置每次读取数据条数
-	 * @return
 	 */
 	public void setAvgDataNum(int avgDataNum) {
 		AvgDataNum = avgDataNum;
 	}
 	/**
 	 * 获取当前显示数据条数
-	 * @return
+	 * @return int
 	 */
 	public int getCurDataNum() {
 		return CurDataNum = adapter.getCount();
 	}
 	/**
 	 * 获取剩余数据条数
-	 * @return
+	 * @return int
 	 */
 	public int getLastDataNum() {
 		return LastDataNum = MaxDataNum - getCurDataNum();
 	}
 	/**
 	 * 获取下次加载数据条数
-	 * @return
+	 * @return int
 	 */
 	public int getLoadDataNum()
 	{

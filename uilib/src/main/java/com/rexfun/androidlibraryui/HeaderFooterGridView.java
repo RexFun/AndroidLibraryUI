@@ -29,12 +29,6 @@ import android.widget.*;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 
-/**
- * A {@link GridView} that supports adding header rows in a
- * very similar way to {@link ListView}.
- * See {@link GridViewWithHeaderAndFooter#addHeaderView(View, Object, boolean)}
- * See {@link GridViewWithHeaderAndFooter#addFooterView(View, Object, boolean)}
- */
 public class HeaderFooterGridView extends GridView {
 
     public static boolean DEBUG = false;
@@ -54,7 +48,7 @@ public class HeaderFooterGridView extends GridView {
          */
         public Object data;
         /**
-         * <code>true</code> if the fixed view should be selectable in the grid
+         * if the fixed view should be selectable in the grid
          */
         public boolean isSelectable;
     }
@@ -113,7 +107,7 @@ public class HeaderFooterGridView extends GridView {
      * Add a fixed view to appear at the top of the grid. If addHeaderView is
      * called more than once, the views will appear in the order they were
      * added. Views added using this call can take focus if they want.
-     * <p/>
+     *
      * NOTE: Call this before calling setAdapter. This is so HeaderGridView can wrap
      * the supplied cursor with one that will also account for header views.
      *
@@ -127,7 +121,7 @@ public class HeaderFooterGridView extends GridView {
      * Add a fixed view to appear at the top of the grid. If addHeaderView is
      * called more than once, the views will appear in the order they were
      * added. Views added using this call can take focus if they want.
-     * <p/>
+     *
      * NOTE: Call this before calling setAdapter. This is so HeaderGridView can wrap
      * the supplied cursor with one that will also account for header views.
      *
