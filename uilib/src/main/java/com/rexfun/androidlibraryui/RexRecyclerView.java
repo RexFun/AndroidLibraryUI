@@ -28,7 +28,7 @@ public class RexRecyclerView extends RecyclerView{
             public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
                 super.onScrollStateChanged(recyclerView, newState);
                 if (newState == RecyclerView.SCROLL_STATE_IDLE && lastVisibleItem + 1 == getAdapter().getItemCount() && PULL_DIRECTION == PULL_UP) {
-                    mListener.pullUpRefresh();
+                    mListener.doRefresh();
                 }
             }
             @Override
@@ -60,15 +60,12 @@ public class RexRecyclerView extends RecyclerView{
                 break;
             case MotionEvent.ACTION_UP:
                 y_tmp2 = y;
-                System.out.println("滑动参值 y1=" + y_tmp1 + "; y2=" + y_tmp2);
                 if(y_tmp1 != 0){
                     if(y_tmp1 - y_tmp2 > 8){
                         PULL_DIRECTION = PULL_UP;
-                        System.out.println("pull_up");
                     }
                     if(y_tmp2 - y_tmp1 > 8){
                         PULL_DIRECTION = PULL_DOWN;
-                        System.out.println("pull_down");
                     }
                 }
                 break;
@@ -97,6 +94,6 @@ public class RexRecyclerView extends RecyclerView{
 
     public interface OnPullUpRefreshListener
     {
-        public void pullUpRefresh();
+        public void doRefresh();
     }
 }
