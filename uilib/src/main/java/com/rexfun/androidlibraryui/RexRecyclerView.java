@@ -18,7 +18,7 @@ public class RexRecyclerView extends RecyclerView{
     private static final int PULL_UP = 0;
     private static final int PULL_DOWN = 1;
     private static int PULL_DIRECTION;
-    private PullUpRefreshListener mListener;
+    private OnPullUpRefreshListener mListener;
 
     public RexRecyclerView(Context ctx, AttributeSet attrs) {
         super(ctx, attrs);
@@ -28,7 +28,7 @@ public class RexRecyclerView extends RecyclerView{
             public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
                 super.onScrollStateChanged(recyclerView, newState);
                 if (newState == RecyclerView.SCROLL_STATE_IDLE && lastVisibleItem + 1 == getAdapter().getItemCount() && PULL_DIRECTION == PULL_UP) {
-                    mListener.pullUpToRefresh();
+                    mListener.pullUpRefresh();
                 }
             }
             @Override
@@ -90,13 +90,13 @@ public class RexRecyclerView extends RecyclerView{
      * 上拉刷新监听器
      * @param listener
      */
-    public void setOnPullUpRefreshListener(PullUpRefreshListener listener)
+    public void setOnPullUpRefreshListener(OnPullUpRefreshListener listener)
     {
         this.mListener = listener;
     }
 
-    public interface PullUpRefreshListener
+    public interface OnPullUpRefreshListener
     {
-        public void pullUpToRefresh();
+        public void pullUpRefresh();
     }
 }
