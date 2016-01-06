@@ -27,7 +27,7 @@ public class RexRecyclerView extends RecyclerView{
             @Override
             public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
                 super.onScrollStateChanged(recyclerView, newState);
-                if (newState == RecyclerView.SCROLL_STATE_IDLE && lastVisibleItem + 1 == getAdapter().getItemCount() && PULL_DIRECTION == PULL_UP) {
+                if (mListener != null && newState == RecyclerView.SCROLL_STATE_IDLE && lastVisibleItem + 1 == getAdapter().getItemCount() && PULL_DIRECTION == PULL_UP) {
                     mListener.doRefresh();
                 }
             }
